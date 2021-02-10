@@ -54,6 +54,7 @@ def get_colormap():
 
 def get_boundarynorm():
     lulc_bounds = get_bounds_from_ids([x.id for x in LULC])
+    lulc_cmap = get_colormap()
     return BoundaryNorm(lulc_bounds, lulc_cmap.N)
 
 def normalize_img(img):
